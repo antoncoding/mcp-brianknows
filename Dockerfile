@@ -29,8 +29,8 @@ COPY package.json package-lock.json ./
 # Install only production dependencies
 RUN npm ci --production --ignore-scripts
 
-# Set environment variable for the Exa API key
-ENV EXA_API_KEY=your-api-key-here
+# Set environment variable for the Brian API key
+ENV BRIAN_API_KEY=your-api-key-here
 
 # Expose the port the app runs on
 EXPOSE 3000

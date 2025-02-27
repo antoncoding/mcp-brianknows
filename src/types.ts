@@ -30,23 +30,46 @@ export interface ExaSearchResponse {
 // Tool Types
 export interface SearchArgs {
   query: string;
+  kb?: string;
   numResults?: number;
 }
 
+export interface BrianKnowsRequest {
+  prompt: string;
+  kb?: string;
+  address?: string;
+  chainId?: string;
+  kbId?: string;
+}
+
+export interface BrianKnowsResponse {
+  result: {
+    input: string;
+    answer: string;
+    context: Array<{
+      pageContent: string;
+      metadata: {
+        description: string;
+        language: string;
+        source: string;
+        title: string;
+      }
+    }>
+  }
+}
+
 // Type guard for search arguments
-export function isValidSearchArgs(args: any): args is SearchArgs {
-  return (
-    typeof args === "object" &&
-    args !== null &&
-    "query" in args &&
-    typeof args.query === "string" &&
-    (args.numResults === undefined || typeof args.numResults === "number")
-  );
+export function isValidSearchArgs(obj: any): obj is SearchArgs {
+  return typeof obj === 'object' && 
+         obj !== null && 
+         typeof obj.query === 'string' &&
+         (obj.kb === undefined || typeof obj.kb === 'string') &&
+         (obj.numResults === undefined || typeof obj.numResults === 'number');
 }
 
 // Recent searches cache type
 export interface CachedSearch {
   query: string;
-  response: ExaSearchResponse;
+  response: any;
   timestamp: string;
 }

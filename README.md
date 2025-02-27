@@ -120,7 +120,7 @@ code %APPDATA%\Claude\claude_desktop_config.json
       "command": "npx",
       "args": ["/path/to/exa-mcp-server/build/index.js"],
       "env": {
-        "EXA_API_KEY": "your-api-key-here"
+        "BRIAN_API_KEY": "your-api-key-here"
       }
     }
   }

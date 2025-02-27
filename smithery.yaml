@@ -6,12 +6,12 @@ startCommand:
     # JSON Schema defining the configuration options for the MCP.
     type: object
     required:
-      - exaApiKey
+      - brianKey
     properties:
-      exaApiKey:
+      brianKey:
         type: string
-        description: The API key for accessing the Exa Search API.
+        description: The API key for accessing the BrianKnows API
   commandFunction:
     # A function that produces the CLI command to start the MCP on stdio.
     |-
-    (config) => ({ command: 'node', args: ['build/index.js'], env: { EXA_API_KEY: config.exaApiKey } })
+    (config) => ({ command: 'node', args: ['build/index.js'], env: { BRIAN_API_KEY: config.brianKey } })

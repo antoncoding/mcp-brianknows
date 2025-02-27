@@ -1,26 +1,26 @@
 {
-  "name": "exa-mcp-server",
+  "name": "brianknows-mcp-server",
   "version": "0.1.0",
-  "description": "A Model Context Protocol server with Exa which does web search",
+  "description": "A Model Context Protocol server for Brianknows knowledge base",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/exa-labs/exa-mcp-server.git"
+    "url": "git+https://github.com/antoncoding/brianknows-mcp-server.git"
   },
   "bin": {
-    "exa-mcp-server": "./build/index.js"
+    "brianknows-mcp-server": "./build/index.js"
   },
   "files": [
     "build"
   ],
   "keywords": [
     "mcp",
-    "exa",
+    "brianknows",
     "search",
     "claude",
     "ai"
   ],
-  "author": "Exa Labs",
+  "author": "antoncoding",
   "scripts": {
     "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
     "prepare": "npm run build",
