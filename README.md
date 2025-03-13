@@ -3,6 +3,10 @@
 
 A Model Context Protocol (MCP) server that connects Claude to BrianKnows' blockchain knowledge base.
 
+<a href="https://glama.ai/mcp/servers/idfph0fstx">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/idfph0fstx/badge" alt="BrianKnows Server MCP server" />
+</a>
+
 ## What is MCP? 🤔
 
 The Model Context Protocol (MCP) lets AI assistants like Claude Desktop connect to external tools and data sources in a secure way while keeping users in control.
